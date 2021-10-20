@@ -1,0 +1,156 @@
+.intro__content {
+  width: 100%;
+  margin: $mg-2 auto 0;
+  padding: $pd-5 0 0;
+
+  text-align: center;
+
+  .intro-top {
+    max-width: 540px;
+    margin: $mg-3 + 10 auto;
+    padding: $pd-5 auto;
+
+    text-align: center;
+
+    &__brand {
+      @include styleText($color-white-0, $fs-3 + 5, $fw-normal);
+      margin-bottom: $mg-1;
+    }
+
+    &__text {
+      @include styleText($color-white-0, $fs-2, 300);
+      margin: $mg-1 0;
+    }
+
+    &__sentences {
+      margin-bottom: $mg-1;
+    }
+
+    &__link {
+      text-decoration-style: none;
+      color: $color-blue-1;
+    }
+
+    &__button {
+      @include styleButton($color-blue-1, $color-blue-1, $pd-0 - 4, $pd-0 + 2);
+      border-radius: 1px;
+
+      margin-top: $mg-3;
+
+      color: $color-white-0;
+
+      transition: color 0.25s ease-out;
+
+      &:hover {
+        @include styleButton(
+          $color-blue-2,
+          $color-blue-2,
+          $pd-0 - 4,
+          $pd-0 + 2
+        );
+      }
+    }
+  }
+
+  .intro-bottom {
+    width: 100%;
+    margin: 0 auto;
+    padding: $pd-4 0 $pd-0;
+
+    &__container {
+      display: flex;
+      justify-content: center;
+
+      column-gap: 9px;
+    }
+
+    &__item {
+      position: relative;
+
+      max-width: 300px;
+
+      &:hover {
+        .intro-bottom__line {
+          height: 8px;
+          opacity: 1;
+        }
+      }
+    }
+
+    &__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 20;
+      background-color: $color-blue-1;
+
+      width: 100%;
+      height: 0px;
+      opacity: 0;
+      transition: height 0.16s, opacity 0.16s;
+    }
+  }
+
+  @include responsive("extra") {
+    .intro-bottom {
+      &__item {
+        max-width: 275px;
+      }
+    }
+  }
+
+  @include responsive("extra-large") {
+    .intro-bottom {
+      &__item {
+        max-width: 230px;
+      }
+    }
+  }
+
+  @include responsive("large") {
+    padding: $pd-2 0 0;
+
+    .intro-top {
+      &__brand {
+        font-size: $fs-3;
+      }
+    }
+
+    .intro-bottom {
+      &__item {
+        max-width: 160px;
+      }
+    }
+  }
+
+  @include responsive("medium") {
+    padding: $pd-2 $pd-4 0 $pd-4;
+
+    .intro-top {
+      &__button {
+        width: 100%;
+      }
+    }
+    .intro-bottom {
+      &__container {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        gap: 8px;
+      }
+
+      &__item {
+        flex-basis: 49%;
+
+        max-width: 310px;
+      }
+    }
+  }
+}

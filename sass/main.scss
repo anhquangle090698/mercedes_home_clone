@@ -1,0 +1,30 @@
+// 7 in 1, import all file in main.scss, only compile file main.scss
+
+//Start variable, next mixin -->
+//Helper
+
+@import "./Helper/variables";
+@import "./Helper/mixin";
+
+//Vendor
+//Only file .scss
+
+//Base
+@import "./Base/reset"; //global
+@import "./Base/customizes";
+@import "./Base/normalized";
+
+//Component
+@import "./Component/button";
+
+//Layouts
+@import "./Layout/header";
+@import "./Layout/navigation";
+@import "./Layout/carousel";
+@import "./Layout/intro";
+@import "./Layout/products";
+@import "./Layout/environment";
+@import "./Layout/references";
+@import "./Layout/contact";
+@import "./Layout/footer";
+@import "./Layout/sticker";

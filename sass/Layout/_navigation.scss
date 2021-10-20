@@ -1,0 +1,173 @@
+.navbar {
+  width: 74%;
+
+  margin: -$mg-0 - 6 auto 0;
+  padding: 0;
+
+  &-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    width: 240px;
+  }
+
+  &-nav {
+    display: flex;
+    margin-top: 50px;
+
+    opacity: 1;
+    transition: all 0.4s ease-in-out;
+
+    &__item {
+      margin: 0 $mg-0 + 8;
+    }
+
+    &__link {
+      @include styleText($color-white-0, $fs-0 - 1, $fw-normal);
+      text-decoration: none;
+
+      &:hover {
+        color: $color-blue-1;
+        text-decoration: none;
+
+        cursor: pointer;
+      }
+
+      &--show {
+        &:hover {
+          color: $color-white-0;
+        }
+      }
+    }
+
+    &__text {
+      display: none;
+
+      &--vetical {
+        display: inline;
+      }
+    }
+  }
+
+  &-search {
+    display: none;
+  }
+
+  @include responsive("extraX") {
+    width: 82%;
+  }
+
+  @include responsive("extraL") {
+    width: 95%;
+  }
+
+  @include responsive("extra-large") {
+    width: 96%;
+
+    align-items: flex-start;
+
+    &-nav {
+      position: relative;
+      top: 120px;
+      left: -85px;
+
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center;
+
+      margin: 0;
+      padding: 0;
+
+      width: 100%;
+      height: 0;
+      background-color: $color-black-0;
+
+      text-align: center;
+
+      opacity: 0;
+
+      &--vertical {
+        height: 100vh;
+
+        opacity: 1;
+
+        .navbar-nav__link {
+          opacity: 1;
+        }
+      }
+
+      &__item {
+        margin: $mg-2 - 5 0;
+      }
+
+      &__link {
+        font-size: $fs-3;
+
+        opacity: 0;
+      }
+
+      &__icon {
+        margin-right: $mg-0 - 5;
+        font-size: $fs-2;
+      }
+
+      &__text {
+        display: inline;
+      }
+    }
+
+    &-search {
+      display: block;
+
+      margin-top: 45px;
+
+      font-size: $fs-0 + 2;
+
+      cursor: pointer;
+
+      &:hover {
+        color: $color-white-0;
+      }
+
+      &__find {
+        margin-right: $mg-0;
+
+        font-size: $fs-2;
+      }
+    }
+  }
+
+  @include responsive("small-large") {
+    margin: -$mg-0 + 5 auto 0;
+    padding-right: $pd-0 - 2;
+
+    width: 98%;
+
+    &-group {
+      justify-content: space-around;
+
+      width: 210px;
+
+      &__brand {
+        width: 44px;
+        height: 44px;
+      }
+
+      &__logo {
+        width: 91px;
+        height: 23px;
+      }
+    }
+
+    &-nav {
+      top: 80px;
+      left: -90px;
+      width: 185px;
+    }
+
+    &-search {
+      margin-top: 25px;
+    }
+  }
+}

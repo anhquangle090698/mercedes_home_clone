@@ -1,0 +1,113 @@
+.contact-content {
+  width: 85%;
+  margin: $mg-2 auto 0;
+
+  &__title {
+    @include styleText($color-white-0, $fs-3 + 4, $fw-normal);
+  }
+
+  &__line {
+    position: relative;
+
+    margin: 30px -1px;
+
+    border: 0;
+    height: 1px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      right: 0;
+
+      display: block;
+
+      background: $color-black-2;
+      height: 1px;
+    }
+  }
+
+  &__social {
+    @include styleText($color-gray-2, $fs-2 - 1, $fw-normal);
+
+    max-width: 40%;
+
+    &-block {
+      margin: $mg-2 + 5 $mg-0;
+    }
+
+    &-icon {
+      @include styleText($color-gray-2, $fs-3 + 6, $fw-normal);
+
+      margin-right: $mg-3;
+
+      width: 30px;
+
+      cursor: pointer;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $color-blue-1;
+      }
+    }
+  }
+
+  &__brandhub {
+    margin: 60px auto;
+
+    text-align: center;
+  }
+
+  &__logo {
+    max-width: 100%;
+    height: 28px;
+    object-fit: cover;
+
+    cursor: pointer;
+  }
+}
+
+//Responsive
+
+@include responsive("extraX") {
+  .contact-content {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+@include responsive("extra-large") {
+  .contact-content {
+    &__social {
+      max-width: 100%;
+
+      &-block {
+        margin: $mg-2 + 5 $mg-0 100px;
+      }
+    }
+  }
+}
+
+@include responsive("small-large") {
+  .contact-content {
+    width: 94%;
+
+    &__title {
+      font-size: $fs-0 + 4;
+    }
+  }
+}
+
+@include responsive("medium") {
+  .contact-content {
+    width: 93%;
+    padding: 0 $pd-0;
+
+    &__brandhub {
+      &-item {
+        margin: $mg-2 + 5 auto;
+      }
+    }
+  }
+}

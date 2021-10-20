@@ -1,0 +1,9 @@
+.navbar {
+  width: 75%;
+  margin: 0 auto;
+  padding: 0;
+}
+.navbar__group-logo {
+  display: flex;
+  align-items: flex-end;
+}

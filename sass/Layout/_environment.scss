@@ -1,0 +1,46 @@
+.environment-content {
+  @include styleText($color-white-0, $fs-2, $fw-normal);
+
+  width: 87%;
+  margin: 100px auto 0;
+  padding: 0 $pd-6 + 2;
+
+  &__top {
+    display: flex;
+    justify-content: flex-start;
+
+    margin-bottom: $mg-2 + 4;
+  }
+
+  &__item {
+    margin-right: $mg-2;
+  }
+
+  &__bottom {
+    margin-bottom: $mg-2 + 4;
+  }
+
+  &__text {
+    
+    font-size: $fs-2;
+    line-height: 25px;
+  }
+}
+
+//Responsive
+
+@include responsive("extraX") {
+  .environment-content {
+    width: 99%;
+    margin: 100px auto 0;
+  }
+}
+
+@include responsive("medium") {
+  .environment-content {
+    width: 97%;
+    &__top {
+      flex-wrap: wrap;
+    }
+  }
+}
