@@ -48,7 +48,7 @@ body {
   width: 72%;
   margin: 3px auto 0;
   opacity: 1;
-  transition: opacity 0.3s;
+  transition: all 0.3s;
 }
 
 .header-top__item {
@@ -64,8 +64,8 @@ body {
   color: #00adef;
 }
 
-.header-top__item:hover .header__icon {
-  border-color: #00adef;
+.header-top__item:hover .header-top__icon {
+  border: 1px solid #00adef;
 }
 
 .header-top__icon {
@@ -77,6 +77,7 @@ body {
 
 .header-top__provider {
   margin: 5px 20px 0 0;
+  cursor: pointer;
 }
 
 .header-top__deutsch {
@@ -1823,39 +1824,44 @@ body {
   color: #4dc6f4;
 }
 
+.sticker-content__share {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
-  .sticker__content {
-    width: 99%;
-    margin: 0 auto;
+  .sticker-content {
     position: fixed;
     bottom: 0;
     left: 0;
     display: flex;
+    width: 99%;
+    margin: 0 auto;
     background-color: #000000;
   }
-  .sticker__content .sticker__items {
+  .sticker-content__item {
     color: #ffffff;
     font-size: 11px;
     font-weight: 400;
-    cursor: pointer;
-    background-color: #1f1f1f;
-    padding: 10px;
-    margin: 1px;
-    border-top-left-radius: 3px;
-    opacity: 1;
-    transform: translateX(0);
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin: 1px;
+    padding: 10px;
+    background-color: #1f1f1f;
+    border-top-left-radius: 3px;
+    cursor: pointer;
+    opacity: 1;
+    transform: translateX(0);
   }
-  .sticker__content .sticker__items span {
+  .sticker-content__text {
     margin-top: 5px;
   }
-  .sticker__content .sticker__icons .sticker__icons-hover {
+  .sticker-content__icon--social:not(.sticker-content__icon--social:first-child) {
     display: none;
   }
-  .sticker__content .sticker__icons span {
+  .sticker-content__share {
     display: block;
+    margin-top: 5px;
     margin-left: -20px;
   }
 }

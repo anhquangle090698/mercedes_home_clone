@@ -19,7 +19,7 @@
     margin: $mg-4 + 1 auto 0;
 
     opacity: 1;
-    transition: opacity 0.3s;
+    transition: all 0.3s;
 
     &__item {
       display: flex;
@@ -33,8 +33,8 @@
       &:hover {
         color: $color-blue-1;
 
-        .header__icon {
-          border-color: $color-blue-1;
+        .header-top__icon {
+          border: 1px solid $color-blue-1;
         }
       }
     }
@@ -49,6 +49,8 @@
 
     &__provider {
       margin: $mg-4 + 3 $mg-2 0 0;
+
+      cursor: pointer;
     }
 
     &__deutsch {
