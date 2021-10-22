@@ -1,64 +1,61 @@
-//variable color 
-$color-white-0 : #ffffff;
-$color-white-1 : #ececec;
-$color-black-0 : #000000;
-$color-black-1 : #141414;
-$color-black-2 : #333333;
-$color-black-3 : #1f1f1f;
-$color-black-4 : #202020;
-$color-black-5 : #242424;
-$color-black-6 : #0b0b0b;
-$color-black-7 : #2a2a2a;
-$color-gray-1 : #cccccc;
-$color-gray-2 : #999999;
-$color-gray-3 : #dddddd;
-$color-gray-4 : #3b3a3b;
-$color-gray-5 : #636363;
-$color-blue-1 : #00adef;
-$color-blue-2 : #0088c6;
-$color-blue-3 : #4dc6f4;
+//variable color
+$color-white-0: #ffffff;
+$color-white-1: #ececec;
+$color-black-0: #000000;
+$color-black-1: #141414;
+$color-black-2: #333333;
+$color-black-3: #1f1f1f;
+$color-black-4: #202020;
+$color-black-5: #242424;
+$color-black-6: #0b0b0b;
+$color-black-7: #2a2a2a;
+$color-gray-1: #cccccc;
+$color-gray-2: #999999;
+$color-gray-3: #dddddd;
+$color-gray-4: #3b3a3b;
+$color-gray-5: #636363;
+$color-blue-1: #00adef;
+$color-blue-2: #0088c6;
+$color-blue-3: #4dc6f4;
 
 //variable font-size
-$fs-0 : 16px;
-$fs-1 : 12px;
-$fs-2 : 14px;
-$fs-3 : 22px;
-$fs-4 : 34px;
+$fs-0: 16px;
+$fs-1: 12px;
+$fs-2: 14px;
+$fs-3: 22px;
+$fs-4: 34px;
 
 //variable font-weight
-$fw-normal : 400;
-$fw-icon : 900;
+$fw-normal: 400;
+$fw-icon: 900;
 
 //variable margin
 
-
-$mg-0 : 10px;
-$mg-1 : 16px;
-$mg-2 : 20px;
-$mg-3 : 40px;
+$mg-0: 10px;
+$mg-1: 16px;
+$mg-2: 20px;
+$mg-3: 40px;
 $mg-4: 2px;
 
 //variable padding
 
-$pd-0 : 10px;
-$pd-1 : 15px;
-$pd-2 : 30px;
-$pd-3 : 5px;
-$pd-4 : 40px;
-$pd-5 : 50px;
-$pd-6 : 20px;
-$pd-7 : 60px;
-
-
+$pd-0: 10px;
+$pd-1: 15px;
+$pd-2: 30px;
+$pd-3: 5px;
+$pd-4: 40px;
+$pd-5: 50px;
+$pd-6: 20px;
+$pd-7: 60px;
 
 //break points
-$breakpoints:(
-    'extraX' : 1700px,
-    'extraL' : 1580px,
-    'extra' : 1440px,
-    'extra-large': 1278px,
-    'large' : 1024px,
-    'small-large' : 992px,
-    'medium' : 768px,
-    'small' : 512px,
-)
+$breakpoints: (
+  "extraX": 1700px,
+  "extraL": 1580px,
+  "extra": 1440px,
+  "extra-large": 1278px,
+  "large": 1024px,
+  "small-large": 992px,
+  "medium": 768px,
+  "small": 512px,
+);

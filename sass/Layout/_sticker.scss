@@ -1,103 +1,103 @@
 .sticker-content {
+  position: fixed;
+  right: 0;
+  bottom: 50%;
+  z-index: 100;
+
+  &__item {
+    @include styleText($color-white-0, $fs-2, $fw-normal);
+
+    margin: 1px 0;
+    padding: $pd-0;
+
+    background-color: $color-black-3;
+    border-top-left-radius: 3px;
+    width: 245px;
+
+    cursor: pointer;
+    opacity: 1;
+    transform: translateX(198px);
+    transition: transform 0.8s;
+
+    &:hover {
+      transform: translateX(0);
+    }
+  }
+
+  &__icon {
+    font-size: $fs-3 + 1;
+    margin-right: $mg-0;
+
+    &--social {
+      margin-right: $mg-2;
+
+      transition: color 0.3s;
+
+      &:nth-child(5) {
+        margin-right: 0;
+      }
+
+      &:not(&:first-child):hover {
+        color: $color-blue-3;
+      }
+    }
+  }
+
+  &__share {
+    display: none;
+  }
+}
+
+//Responsive
+
+@include responsive("medium") {
+  .sticker-content {
     position: fixed;
-    right: 0;
-    bottom: 50%;
-    z-index: 100;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+
+    width: 99%;
+    margin: 0 auto;
+    background-color: $color-black-0;
 
     &__item {
-        @include styleText($color-white-0, $fs-2, $fw-normal);
-        
-        margin: 1px 0;
-        padding: $pd-0;
+      @include styleText($color-white-0, $fs-1 - 1, $fw-normal);
 
-        background-color: $color-black-3;
-        border-top-left-radius: 3px;
-        width: 245px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
 
-        cursor: pointer;
-        opacity: 1;
-        transform: translateX(198px);
-        transition: transform .8s;
+      margin: 1px;
+      padding: $pd-0;
+      background-color: $color-black-3;
+      border-top-left-radius: 3px;
 
-        &:hover {
-            transform: translateX(0);
-        }
+      cursor: pointer;
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    &__text {
+      margin-top: $mg-4 + 3;
     }
 
     &__icon {
-        font-size: $fs-3 + 1;
-        margin-right: $mg-0;
-        
-        &--social {
-            margin-right: $mg-2;
+      margin-right: 0;
 
-            transition: color .3s;
-
-            &:last-child {
-                margin-right: 0;
-            }
-
-            &:not(&:first-child):hover {
-                color: $color-blue-3
-            }
+      &--social {
+        margin-right: 0;
+        &:not(&:first-child) {
+          display: none;
         }
+      }
     }
 
     &__share {
-        display: none;
+      display: block;
+
+      margin-top: 5px;
     }
-}
-
-//Responsive 
-
-@include responsive("medium") {
-    .sticker-content {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-
-        display: flex;
-
-        width: 99%;
-        margin: 0 auto;
-        background-color: $color-black-0;
-
-        &__item {
-            @include styleText($color-white-0, $fs-1 - 1, $fw-normal);
-
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-
-            margin: 1px;
-            padding: $pd-0;
-            background-color: $color-black-3;
-            border-top-left-radius: 3px;
-
-            cursor: pointer;
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        &__text {
-            margin-top: $mg-4 + 3;
-        }
-
-        &__icon {
-
-            &--social{
-        
-               &:not(&:first-child) {
-                    display: none;
-               } 
-            }
-        }
-
-        &__share {
-            display: block;
-
-            margin-top: 5px;
-            margin-left: -$mg-2;
-        }
-    }
+  }
 }

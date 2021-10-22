@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .navbar {
   width: 74%;
 
@@ -5,18 +12,28 @@
   padding: 0;
 
   &-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
 
     width: 240px;
   }
 
   &-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-top: 50px;
 
     opacity: 1;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
 
     &__item {
@@ -65,6 +82,10 @@
   @include responsive("extra-large") {
     width: 96%;
 
+    -webkit-box-align: start;
+
+    -ms-flex-align: start;
+
     align-items: flex-start;
 
     &-nav {
@@ -72,8 +93,17 @@
       top: 120px;
       left: -85px;
 
+      display: -webkit-box !important;
+
+      display: -ms-flexbox !important;
+
       display: flex !important;
+      -webkit-box-orient: vertical !important;
+      -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
       flex-direction: column !important;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
 
       margin: 0;
@@ -145,6 +175,7 @@
     width: 98%;
 
     &-group {
+      -ms-flex-pack: distribute;
       justify-content: space-around;
 
       width: 210px;

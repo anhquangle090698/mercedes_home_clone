@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .environment-content {
   @include styleText($color-white-0, $fs-2, $fw-normal);
 
@@ -6,7 +13,11 @@
   padding: 0 $pd-6 + 2;
 
   &__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
 
     margin-bottom: $mg-2 + 4;
@@ -21,7 +32,6 @@
   }
 
   &__text {
-    
     font-size: $fs-2;
     line-height: 25px;
   }
@@ -40,6 +50,7 @@
   .environment-content {
     width: 97%;
     &__top {
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
     }
   }

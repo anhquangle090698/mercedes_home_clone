@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .contact-content {
   width: 85%;
   margin: $mg-2 auto 0;
@@ -45,6 +52,8 @@
       width: 30px;
 
       cursor: pointer;
+      -webkit-transition: color 0.3s;
+      -o-transition: color 0.3s;
       transition: color 0.3s;
 
       &:hover {
@@ -62,6 +71,7 @@
   &__logo {
     max-width: 100%;
     height: 28px;
+    -o-object-fit: cover;
     object-fit: cover;
 
     cursor: pointer;

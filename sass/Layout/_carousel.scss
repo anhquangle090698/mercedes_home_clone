@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .carousel__content {
   width: 88%;
   margin: 0 auto;
@@ -13,12 +20,18 @@
   width: 0;
 
   opacity: 1;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 
   i {
     @include styleText($color-white-0, $fs-4, $fw-icon);
 
     height: 45px;
+
+    -webkit-transition: color 0.25s;
+
+    -o-transition: color 0.25s;
 
     transition: color 0.25s;
 
@@ -39,12 +52,16 @@
       .carousel-item__brand,
       .carousel-item__button {
         opacity: 1;
+        -webkit-transform: translateY(0px);
+        -ms-transform: translateY(0px);
         transform: translateY(0px);
       }
     }
 
     .carousel-item__bottom {
       opacity: 1;
+      -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
       transform: translateY(0px);
     }
   }
@@ -67,9 +84,20 @@
     margin-top: $mg-2 + 10;
     width: 45%;
 
+    -webkit-transform: translateY(-50px);
+
+    -ms-transform: translateY(-50px);
+
     transform: translateY(-50px);
     opacity: 0;
+    -webkit-transition: opacity 0.5s ease-out, -webkit-transform 0.5s ease-out;
+    transition: opacity 0.5s ease-out, -webkit-transform 0.5s ease-out;
+    -o-transition: transform 0.5s ease-out, opacity 0.5s ease-out;
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out,
+      -webkit-transform 0.5s ease-out;
+    -webkit-transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
     transition-delay: 0.5s;
 
     &--dark {
@@ -84,10 +112,24 @@
 
     @include styleText($color-gray-3, $fs-2, 300);
 
+    -webkit-transform: translateY(-30px);
+
+    -ms-transform: translateY(-30px);
+
     transform: translateY(-30px);
     opacity: 0;
+    -webkit-transition: color 0.25s ease-out, opacity 0.5s ease-out,
+      -webkit-transform 0.5s ease-out;
+    transition: color 0.25s ease-out, opacity 0.5s ease-out,
+      -webkit-transform 0.5s ease-out;
+    -o-transition: color 0.25s ease-out, transform 0.5s ease-out,
+      opacity 0.5s ease-out;
     transition: color 0.25s ease-out, transform 0.5s ease-out,
       opacity 0.5s ease-out;
+    transition: color 0.25s ease-out, transform 0.5s ease-out,
+      opacity 0.5s ease-out, -webkit-transform 0.5s ease-out;
+    -webkit-transition-delay: 0.8s;
+    -o-transition-delay: 0.8s;
     transition-delay: 0.8s;
 
     &:hover {
@@ -104,9 +146,20 @@
 
     margin: 0 $mg-3 - 10;
 
+    -webkit-transform: translateY(-30px);
+
+    -ms-transform: translateY(-30px);
+
     transform: translateY(-30px);
     opacity: 0;
+    -webkit-transition: opacity 0.5s ease-out, -webkit-transform 0.5s ease-out;
+    transition: opacity 0.5s ease-out, -webkit-transform 0.5s ease-out;
+    -o-transition: transform 0.5s ease-out, opacity 0.5s ease-out;
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out,
+      -webkit-transform 0.5s ease-out;
+    -webkit-transition-delay: 0.8s;
+    -o-transition-delay: 0.8s;
     transition-delay: 0.8s;
   }
 
@@ -125,7 +178,11 @@
   background-color: $color-black-1;
 
   &__group {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 
     width: 78%;
@@ -142,6 +199,22 @@
 
     color: $color-black-2;
     font-size: $fs-0;
+
+    &::-webkit-input-placeholder {
+      opacity: 1;
+    }
+
+    &::-moz-placeholder {
+      opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+      opacity: 1;
+    }
+
+    &::-ms-input-placeholder {
+      opacity: 1;
+    }
 
     &::placeholder {
       opacity: 1;

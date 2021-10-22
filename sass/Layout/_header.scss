@@ -1,33 +1,63 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .header {
-  //Ẩn, hiện khi scroll
   position: fixed;
   z-index: 200;
 
   width: 100%;
   background-color: $color-black-0;
 
+  -webkit-transform: translateY(0px);
+
+  -ms-transform: translateY(0px);
+
   transform: translateY(0px);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
   transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition-delay: 0.1s;
+  -o-transition-delay: 0.1s;
   transition-delay: 0.1s;
 
   &-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 
     width: 72%;
     margin: $mg-4 + 1 auto 0;
 
     opacity: 1;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 
     &__item {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       font-size: $fs-0 - 1;
 
       margin: 0 $mg-0;
       cursor: pointer;
+      -webkit-transition: color 0.16s;
+      -o-transition: color 0.16s;
       transition: color 0.16s;
 
       &:hover {
@@ -60,6 +90,8 @@
       margin-top: $mg-4 + 4;
 
       cursor: pointer;
+      -webkit-transition: color 0.16s;
+      -o-transition: color 0.16s;
       transition: color 0.16s;
 
       &:hover {
